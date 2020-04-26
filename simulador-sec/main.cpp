@@ -50,14 +50,17 @@ void participante() {
 }
 
 int aleatoreo(int inferior, int superior) {
+    /**
+     * Si se especifica usa un dispositivo de generación de números pseudoaleatoreos o /dev/urandom
+     */
+    std::random_device dispositivo;
+
+    /**
+     * 
+     * Se especifica una distribución uniforme de datos.
+     */
     std::uniform_int_distribution<int> distribucion(inferior, superior);
 
-    std::random_device dispositivo; // usa un dispositivo o /dev/urandom
+    // Retornamos un número pseudoaleatoreo
     return distribucion(dispositivo);
 }
-
-/*
-int aleatoreo(int inferior, int superior) {
-    return (rand() % (superior - (inferior + 1))) +inferior;
-}
- */ 
