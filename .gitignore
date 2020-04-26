@@ -35,3 +35,4 @@
 nbproject
 build
 dist
+*.csv
